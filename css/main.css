@@ -1,0 +1,555 @@
+@charset "utf-8";
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #202020;
+}
+
+
+/* 공통 레이아웃 */
+
+#wrap {
+    position: relative;
+    width: 100%;
+    /* height: 100vh; */
+}
+
+.sectionset {
+    position: relative;
+    padding: 140px 0;
+    text-align: center;
+}
+
+.container {
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/* header */
+
+#header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    box-sizing: border-box;
+    z-index: 9999;
+}
+
+.header__logo {
+    margin: 15px 0 0 20px;
+}
+
+.logo__link {
+    display: block;
+}
+
+.logo__link h1 {
+    font-family: "Khand";
+    font-size: 32px;
+    text-align: center;
+    color: #212120;
+}
+
+.logo__link span {
+    display: block;
+}
+
+.header__menu {
+    position: relative;
+    width: 36px;
+    height: 30px;
+    padding: 6px;
+    margin: 22px 20px 0 0;
+}
+
+.burger-btn {
+    all: unset;
+    position: relative;
+    width: 36px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.burger-btn span {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 36px;
+    height: 6px;
+    background-color: #212120;
+    transition: all .3s ease-out;
+}
+
+.burger-btn .burger-t {
+    top: 0;
+}
+
+.burger-btn .burger-m {
+    top: 12px;
+}
+
+.burger-btn .burger-b {
+    top: 24px;
+}
+
+
+/* gnb--open 시 */
+
+.burger-btn--open span {
+    background-color: #f0f0f0;
+}
+
+.burger-btn--open .burger-t {
+    top: 12px;
+    transform: rotate(45deg);
+}
+
+.burger-btn--open .burger-m {
+    opacity: 0;
+}
+
+.burger-btn--open .burger-b {
+    top: 12px;
+    transform: rotate(-45deg);
+}
+
+
+/* gnb */
+
+.gnb {
+    position: fixed;
+    top: 0;
+    right: -200%;
+    width: 400px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    transition: all 0.5s;
+    z-index: 9998;
+}
+
+.gnb--open {
+    right: 0;
+}
+
+.gnb__menu {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -80px;
+}
+
+.gnb__menu li {
+    text-align: center;
+}
+
+.gnb__menu li span {
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 40px;
+    color: #707070;
+    transition: color 0.5s;
+    cursor: pointer;
+}
+
+.gnb__menu li span:hover {
+    color: #f0f0f0;
+}
+
+
+/* 메인 영역 */
+
+.main {
+    position: relative;
+}
+
+.main h2 {
+    text-transform: uppercase;
+    font-size: 2.5em;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-family: 'Raleway';
+}
+
+.main h2::after {
+    content: "";
+    width: 55px;
+    height: 1px;
+    display: block;
+    margin: 35px auto 68px;
+    background-color: #c3a876;
+}
+
+#content {
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    background-color: #e7dfd0;
+}
+
+.movewrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 60vh;
+    height: 60vh;
+    margin-top: -30vh;
+    margin-left: -30vh;
+}
+
+.move {
+    width: 100%;
+    height: 100%;
+}
+
+#content>.button {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-bottom: 0.5rem;
+    margin-left: -21px;
+}
+
+.button>i {
+    font-size: 3rem;
+    text-align: center;
+}
+
+
+/* 돋보기 */
+
+.magnifier {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    margin: -100px 0 0 -100px;
+    border-radius: 100%;
+    background: url('../images/illust.svg') #e7dfd0 no-repeat;
+    z-index: 999;
+}
+
+
+/* about me */
+
+#about {
+    width: 100%;
+    background-color: #f8f8f8;
+}
+
+#about p {
+    width: 66%;
+    line-height: 1.8;
+    color: #888;
+    margin: 0 auto;
+}
+
+
+/* skills */
+
+#skills {
+    width: 100%;
+    background-color: #fff;
+}
+
+.skillbox {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skillbox>li {
+    box-sizing: border-box;
+    flex-basis: 50%;
+    text-align: left;
+    padding: 1em 0.7rem;
+}
+
+.skillbox li h3 {
+    line-height: 2;
+    color: #151515;
+}
+
+.skillbox li h3::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-image: url('../images/skills-logo.png');
+}
+
+.skillbox li i {
+    display: block;
+    font-size: 1.5rem;
+    color: #c3a876;
+}
+
+.skillbox li .progressbar {
+    width: 160px;
+    height: 5px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    background-color: #efefef;
+}
+
+.skillbox li .progress-on {
+    height: 5px;
+    border-radius: 30px;
+    animation: progressbar 2s ease-out;
+    -webkit-animation: progressbar 2s ease-out;
+    -moz-animation: progressbar 2s ease-out;
+    -ms-animation: progressbar 2s ease-out;
+    animation-direction: reverse;
+}
+
+.p-html {
+    width: 80%;
+    background-color: #e54d27;
+}
+
+.p-css {
+    width: 80%;
+    background-color: #1370b6;
+}
+
+.p-js {
+    width: 50%;
+    background-color: #ffc600;
+}
+
+.p-jquery {
+    width: 70%;
+    background-color: #0765a8;
+}
+
+.p-ps {
+    width: 85%;
+    background-color: #37c5fe;
+}
+
+.p-illust {
+    width: 50%;
+    background-color: #ff7e1b;
+}
+
+.skillbox li p {
+    line-height: 1.6;
+    font-size: 0.875rem;
+    letter-spacing: -.5px;
+}
+
+
+/* skill animation */
+
+@keyframes progressbar {
+    to {
+        width: 0%;
+    }
+}
+
+@-webkit-keyframes progressbar {
+    to {
+        width: 0%;
+    }
+}
+
+@-moz-keyframes progressbar {
+    to {
+        width: 0%;
+    }
+}
+
+@-ms-keyframes progressbar {
+    to {
+        width: 0%;
+    }
+}
+
+
+/* portfolio */
+
+#portfolio {}
+
+#portfolio h2 {}
+
+.portfolio__list {
+    position: relative;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.portfolio__list::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.portfolio__list li {
+    width: 33.3333%;
+    height: 100%;
+    float: left;
+}
+
+.portfolio__list li a {
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio__item {
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio__item__image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.portfolio__item__image::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio__item__image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.portfolio__item__image .origianl-size {
+    width: auto;
+}
+
+.portfolio__item__info {
+    width: 100%;
+    height: 95px;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    line-height: 20px;
+    padding: 25px 0;
+    z-index: 9;
+}
+
+.portfolio__item span {
+    display: block;
+    color: #bbbbbb;
+    text-transform: capitalize;
+}
+
+
+/* 호버되었을 경우 */
+
+.portfolio--hover .portfolio__item__image,
+.portfolio__item__image::after,
+.portfolio__item__image img,
+.portfolio__item__info {
+    transition: all 0.5s;
+}
+
+.portfolio--hover .portfolio__item__image img {
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+.portfolio--hover .portfolio__item__info {
+    color: #fff;
+    transform: translateY(-95px);
+}
+
+.portfolio--hover .portfolio__item__image::after {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+/* footer */
+
+#footer {
+    position: relative;
+    padding: 80px 0;
+    text-align: center;
+    line-height: 1.6;
+    background-color: #222;
+}
+
+#footer address i {
+    font-size: 1em;
+}
+
+#footer address a {
+    color: #aaa;
+    font-size: 0.75em;
+    transition: color 0.5s;
+}
+
+#footer address a:hover {
+    color: #fff;
+}
+
+#footer .copyright {
+    color: #707070;
+    font-size: 0.688rem;
+}
+
+@media screen and (max-width: 1200px) {
+    /* 1200 공통 레이아웃 */
+    .container {
+        width: auto;
+    }
+    /* 1200 about */
+    .about p {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* 768 메인 영역 */
+    .movewrap {
+        width: 90vw;
+        height: 90vw;
+        margin-top: -45vw;
+        margin-left: -45vw;
+    }
+    /* 768 돋보기 */
+    .magnifier {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        margin: -75px 0 0 -75px;
+    }
+    /* 768 portfolio */
+    .portfolio__list {
+        height: auto;
+    }
+    .portfolio__list li {
+        width: 100%;
+    }
+}
