@@ -1,9 +1,8 @@
 @charset "utf-8";
-body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Source Sans Pro', sans-serif;
 }
 
 ul,
@@ -14,6 +13,10 @@ li {
 a {
     text-decoration: none;
     color: #202020;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 
@@ -50,12 +53,14 @@ a {
     left: 0;
     width: 100%;
     height: 85px;
-    box-sizing: border-box;
     z-index: 9999;
 }
 
 .header__logo {
-    margin: 15px 0 0 20px;
+    position: relative;
+    top: 50%;
+    margin-left: 15px;
+    margin-top: -32px;
 }
 
 .logo__link {
@@ -77,12 +82,14 @@ a {
     position: relative;
     width: 36px;
     height: 30px;
-    padding: 6px;
-    margin: 22px 20px 0 0;
+    top: 50%;
+    margin-top: -15px;
+    margin-right: 25px;
 }
 
 .burger-btn {
-    all: unset;
+    border: none;
+    background: none;
     position: relative;
     width: 36px;
     height: 30px;
@@ -97,6 +104,9 @@ a {
     height: 6px;
     background-color: #212120;
     transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
 }
 
 .burger-btn .burger-t {
@@ -121,6 +131,9 @@ a {
 .burger-btn--open .burger-t {
     top: 12px;
     transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
 }
 
 .burger-btn--open .burger-m {
@@ -130,6 +143,9 @@ a {
 .burger-btn--open .burger-b {
     top: 12px;
     transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
 }
 
 
@@ -143,6 +159,9 @@ a {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.85);
     transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
     z-index: 9998;
 }
 
@@ -168,6 +187,9 @@ a {
     line-height: 40px;
     color: #707070;
     transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
     cursor: pointer;
 }
 
@@ -280,7 +302,6 @@ a {
 }
 
 .skillbox>li {
-    box-sizing: border-box;
     flex-basis: 50%;
     text-align: left;
     padding: 1em 0.7rem;
@@ -396,6 +417,9 @@ a {
     position: relative;
     width: 100%;
     transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
 }
 
 .portfolio__list::after {
@@ -443,6 +467,9 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     width: 100%;
 }
 
@@ -454,7 +481,6 @@ a {
     width: 100%;
     height: 95px;
     text-transform: uppercase;
-    box-sizing: border-box;
     line-height: 20px;
     padding: 25px 0;
     z-index: 9;
@@ -474,15 +500,24 @@ a {
 .portfolio__item__image img,
 .portfolio__item__info {
     transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -moz-transition: all 0.5s;
 }
 
 .portfolio--hover .portfolio__item__image img {
     transform: translate(-50%, -50%) scale(1.05);
+    -webkit-transform: translate(-50%, -50%) scale(1.05);
+    -ms-transform: translate(-50%, -50%) scale(1.05);
+    -moz-transform: translate(-50%, -50%) scale(1.05);
 }
 
 .portfolio--hover .portfolio__item__info {
     color: #fff;
     transform: translateY(-95px);
+    -webkit-transform: translateY(-95px);
+    -moz-transform: translateY(-95px);
+    -ms-transform: translateY(-95px);
 }
 
 .portfolio--hover .portfolio__item__image::after {
@@ -508,6 +543,9 @@ a {
     color: #aaa;
     font-size: 0.75em;
     transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    -moz-transition: color 0.5s;
 }
 
 #footer address a:hover {
